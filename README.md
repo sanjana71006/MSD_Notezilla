@@ -35,8 +35,8 @@
 
 ## Screenshots 🖼️  
 
-| **Login Page** | **Signup Page** | **Home Page** |  
-|---------------|----------------|--------------|  
+| **Login Page** | **Signup Page** | 
+|---------------|----------------|
 | ![Login](SignUp.png) | ![Signup](Login.png) 
 ## Future Enhancements 🚀  
 
