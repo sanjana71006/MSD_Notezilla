@@ -63,10 +63,4 @@ MIT
 
 ---  
 
-**🔗 Live Demo:** [https://notezilla-demo.netlify.app](https://notezilla-demo.netlify.app) *(example link)*  
-
-**🐞 Report Bugs:** [GitHub Issues](https://github.com/yourusername/notezilla/issues)  
-
----  
-
 Made with ❤️ for students, by students! 📚✨
