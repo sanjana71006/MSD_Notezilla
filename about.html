@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Notezilla</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14,2 14,8 20,8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10,9 9,9 8,9"></polyline>
+                </svg>
+                <span class="brand-text">Notezilla</span>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="browse.html" class="nav-link">Browse</a>
+                <a href="upload.html" class="nav-link">Upload</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                
+                <div class="user-menu" id="userMenu">
+                    <button class="user-avatar" id="userAvatar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="profile.html" class="dropdown-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Profile
+                        </a>
+                        <a href="settings.html" class="dropdown-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m10-9a3 3 0 1 0 0 6m0-6a3 3 0 1 0 0-6m0 12a3 3 0 1 0 0 6m0-6a3 3 0 1 0 0-6"></path>
+                            </svg>
+                            Settings
+                        </a>
+                        <button class="dropdown-item" id="logoutBtn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16,17 21,12 16,7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="auth-buttons" id="authButtons">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero about-hero">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">About <span class="text-gradient">Notezilla</span></h1>
+                <p class="hero-description">
+                    Empowering students worldwide through collaborative learning and knowledge sharing.
+                    Built by students, for students.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p class="section-description">
+                        At Notezilla, we believe that education should be collaborative, accessible, and empowering. 
+                        Our mission is to create a comprehensive platform where students can share knowledge, 
+                        access quality study materials, and support each other's academic journey.
+                    </p>
+                    <p class="section-description">
+                        We're breaking down the barriers that often exist in traditional education systems, 
+                        creating a space where every student can contribute, learn, and grow together.
+                    </p>
+                </div>
+                <div class="content-visual">
+                    <div class="visual-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12,6 12,12 16,14"></polyline>
+                        </svg>
+                        <h3>24/7 Access</h3>
+                        <p>Resources available anytime, anywhere</p>
+                    </div>
+                    <div class="visual-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <h3>Community Driven</h3>
+                        <p>Built and maintained by students</p>
+                    </div>
+                    <div class="visual-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                        <h3>Quality Assured</h3>
+                        <p>Curated content from top students</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Values</h2>
+                <p class="section-description">
+                    The principles that guide everything we do at Notezilla
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Quality First</h3>
+                    <p class="value-description">
+                        We prioritize high-quality content and maintain strict standards to ensure students 
+                        access accurate, helpful, and reliable study materials.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <circle cx="12" cy="1" r="1"></circle>
+                            <circle cx="12" cy="23" r="1"></circle>
+                            <circle cx="20.49" cy="8.51" r="1"></circle>
+                            <circle cx="3.51" cy="15.49" r="1"></circle>
+                            <circle cx="20.49" cy="15.49" r="1"></circle>
+                            <circle cx="3.51" cy="8.51" r="1"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Accessibility</h3>
+                    <p class="value-description">
+                        Education should be accessible to everyone. We strive to create an inclusive platform 
+                        that serves students from all backgrounds and institutions.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M8 21l8-11-8-11v22z"></path>
+                            <path d="M16 21l8-11-8-11v22z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Innovation</h3>
+                    <p class="value-description">
+                        We continuously innovate to improve the learning experience, incorporating new 
+                        technologies and methodologies to serve our community better.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Transparency</h3>
+                    <p class="value-description">
+                        We believe in open communication and transparency in our processes, policies, 
+                        and the way we handle student data and content.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Community</h3>
+                    <p class="value-description">
+                        Our strength lies in our community. We foster an environment of mutual support, 
+                        respect, and collaborative learning among all students.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Excellence</h3>
+                    <p class="value-description">
+                        We strive for excellence in everything we do - from platform performance to 
+                        content quality and user experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="content-visual">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>2023</h4>
+                                <p>Idea conceived by students struggling with resource sharing</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>2024</h4>
+                                <p>Platform development begins with focus on user experience</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker active"></div>
+                            <div class="timeline-content">
+                                <h4>Present</h4>
+                                <p>Serving thousands of students across multiple institutions</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker future"></div>
+                            <div class="timeline-content">
+                                <h4>Future</h4>
+                                <p>Expanding globally with AI-powered study recommendations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="section-description">
+                        Notezilla was born from a simple observation: students were struggling to access 
+                        quality study materials and share knowledge effectively. What started as a small 
+                        project to help classmates has grown into a comprehensive platform serving 
+                        thousands of students.
+                    </p>
+                    <p class="section-description">
+                        Every feature we build, every decision we make, is guided by our commitment to 
+                        improving the educational experience for students everywhere. We're not just 
+                        building a platform - we're building a community.
+                    </p>
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Resources Shared</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Active Students</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Universities</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guidelines Section -->
+    <section class="guidelines-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Community Guidelines</h2>
+                <p class="section-description">
+                    Creating a safe, respectful, and productive learning environment for everyone
+                </p>
+            </div>
+
+            <div class="guidelines-grid">
+                <div class="guideline-card">
+                    <div class="guideline-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                    </div>
+                    <h3>Quality Content</h3>
+                    <ul>
+                        <li>Share original or properly attributed content</li>
+                        <li>Ensure materials are accurate and helpful</li>
+                        <li>Use clear, descriptive titles and descriptions</li>
+                        <li>Organize content with appropriate categories</li>
+                    </ul>
+                </div>
+
+                <div class="guideline-card">
+                    <div class="guideline-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3>Respectful Behavior</h3>
+                    <ul>
+                        <li>Treat all community members with respect</li>
+                        <li>Provide constructive feedback and comments</li>
+                        <li>Avoid spam, self-promotion, and irrelevant content</li>
+                        <li>Report inappropriate content or behavior</li>
+                    </ul>
+                </div>
+
+                <div class="guideline-card">
+                    <div class="guideline-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <circle cx="12" cy="16" r="1"></circle>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>Legal Compliance</h3>
+                    <ul>
+                        <li>Respect copyright and intellectual property</li>
+                        <li>Don't share copyrighted textbooks or materials</li>
+                        <li>Only upload content you have rights to share</li>
+                        <li>Follow your institution's academic policies</li>
+                    </ul>
+                </div>
+
+                <div class="guideline-card">
+                    <div class="guideline-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m10-9a3 3 0 1 0 0 6m0-6a3 3 0 1 0 0-6m0 12a3 3 0 1 0 0 6m0-6a3 3 0 1 0 0-6"></path>
+                        </svg>
+                    </div>
+                    <h3>Privacy & Safety</h3>
+                    <ul>
+                        <li>Don't share personal information unnecessarily</li>
+                        <li>Respect others' privacy and confidentiality</li>
+                        <li>Use secure passwords and protect your account</li>
+                        <li>Report security concerns immediately</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Join Our Community?</h2>
+                <p class="cta-description">
+                    Become part of a growing community of students helping each other succeed. 
+                    Share your knowledge, access quality resources, and excel in your studies.
+                </p>
+                <div class="cta-actions">
+                    <a href="signup.html" class="btn btn-primary btn-large">
+                        Get Started Today
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </a>
+                    <a href="browse.html" class="btn btn-outline btn-large">
+                        Explore Resources
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21l-4.35-4.35"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                        </svg>
+                        <span class="brand-text">Notezilla</span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering students with collaborative learning and resource sharing.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="browse.html">Browse Resources</a></li>
+                        <li><a href="upload.html">Upload Content</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><span>Past Papers</span></a></li>
+                        <li><a href="#"><span>Study Notes</span></a></li>
+                        <li><a href="#"><span>Lab Manuals</span></a></li>
+                        <li><a href="#"><span>Project Ideas</span></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><span>Help Center</span></a></li>
+                        <li><a href="#"><span>Guidelines</span></a></li>
+                        <li><a href="#"><span>Privacy Policy</span></a></li>
+                        <li><a href="#"><span>Terms of Service</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Notezilla. All rights reserved.</p>
+                <p>Made with ❤️ for students, by students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

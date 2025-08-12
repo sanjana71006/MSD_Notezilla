@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Notezilla</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14,2 14,8 20,8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10,9 9,9 8,9"></polyline>
+                </svg>
+                <span class="brand-text">Notezilla</span>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="browse.html" class="nav-link">Browse</a>
+                <a href="upload.html" class="nav-link">Upload</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                
+                <div class="user-menu" id="userMenu">
+                    <button class="user-avatar" id="userAvatar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="profile.html" class="dropdown-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Profile
+                        </a>
+                        <a href="settings.html" class="dropdown-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m10-9a3 3 0 1 0 0 6m0-6a3 3 0 1 0 0-6m0 12a3 3 0 1 0 0 6m0-6a3 3 0 1 0 0-6"></path>
+                            </svg>
+                            Settings
+                        </a>
+                        <button class="dropdown-item" id="logoutBtn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16,17 21,12 16,7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="auth-buttons" id="authButtons">
+                    <a href="login.html" class="btn btn-secondary">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero contact-hero">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Get in <span class="text-gradient">Touch</span></h1>
+                <p class="hero-description">
+                    Have questions, suggestions, or need help? We're here to assist you. 
+                    Reach out to our team and we'll get back to you as soon as possible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>Send us an email and we'll respond within 24 hours</p>
+                        <a href="mailto:support@notezilla.edu" class="contact-link">support@notezilla.edu</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p>Come visit our office during business hours</p>
+                        <address class="contact-address">
+                            123 Education Street<br>
+                            Learning District<br>
+                            Knowledge City, KC 12345
+                        </address>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12,6 12,12 16,14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Office Hours</h3>
+                        <p>We're available during these hours</p>
+                        <div class="office-hours">
+                            <div>Monday - Friday: 9:00 AM - 6:00 PM</div>
+                            <div>Saturday: 10:00 AM - 4:00 PM</div>
+                            <div>Sunday: Closed</div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>Speak directly with our support team</p>
+                        <a href="tel:+1234567890" class="contact-link">+1 (234) 567-8900</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-header">
+                            <h2>Send us a Message</h2>
+                            <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                <div class="form-error" id="firstNameError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                <div class="form-error" id="lastNameError"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <div class="form-error" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="content">Content Issues</option>
+                                <option value="account">Account Problems</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="form-error" id="subjectError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Please provide as much detail as possible..." required></textarea>
+                            <div class="form-error" id="messageError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkbox-custom"></span>
+                                Subscribe to our newsletter for updates and announcements
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span class="btn-text">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                                </svg>
+                                Send Message
+                            </span>
+                            <span class="loading hidden">
+                                <span class="spinner"></span>
+                                Sending...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">
+                    Find quick answers to common questions about Notezilla
+                </p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I upload resources to Notezilla?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>To upload resources, you need to create an account and log in. Then navigate to the "Upload" page, fill out the required information about your resource, select the file, and submit it for review. All uploads are moderated to ensure quality.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What types of files can I upload?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We support PDF, DOC, DOCX, PPT, PPTX, JPG, and PNG files up to 10MB in size. These formats cover most study materials including notes, presentations, past papers, and diagrams.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How long does it take for uploaded content to be approved?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our moderation team typically reviews and approves content within 24-48 hours. During peak periods (like exam seasons), it may take up to 72 hours. You'll receive an email notification once your content is approved.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I download resources without creating an account?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can browse and view resource details without an account, but downloading requires registration. This helps us maintain quality, track usage, and provide better recommendations to our community.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I report inappropriate content?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Each resource page has a "Report" button. Click it and select the reason for reporting. Our moderation team will review the content within 24 hours and take appropriate action if necessary.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is Notezilla free to use?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Notezilla is completely free for students. Our mission is to make quality educational resources accessible to everyone. We're supported by educational institutions and partnerships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                        </svg>
+                        <span class="brand-text">Notezilla</span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering students with collaborative learning and resource sharing.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="browse.html">Browse Resources</a></li>
+                        <li><a href="upload.html">Upload Content</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><span>Past Papers</span></a></li>
+                        <li><a href="#"><span>Study Notes</span></a></li>
+                        <li><a href="#"><span>Lab Manuals</span></a></li>
+                        <li><a href="#"><span>Project Ideas</span></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><span>Help Center</span></a></li>
+                        <li><a href="#"><span>Guidelines</span></a></li>
+                        <li><a href="#"><span>Privacy Policy</span></a></li>
+                        <li><a href="#"><span>Terms of Service</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Notezilla. All rights reserved.</p>
+                <p>Made with ❤️ for students, by students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const loading = submitBtn.querySelector('.loading');
+            
+            // Clear previous errors
+            document.querySelectorAll('.form-error').forEach(error => error.textContent = '');
+            
+            // Show loading state
+            btnText.classList.add('hidden');
+            loading.classList.remove('hidden');
+            submitBtn.disabled = true;
+            
+            try {
+                // Simulate form submission
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                // Show success message
+                const successDiv = document.createElement('div');
+                successDiv.className = 'success-message show';
+                successDiv.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: var(--space-2);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 1.25rem; height: 1.25rem;">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        Thank you for your message! We'll get back to you within 24 hours.
+                    </div>
+                `;
+                
+                const form = document.getElementById('contactForm');
+                form.insertBefore(successDiv, form.firstChild);
+                
+                // Reset form
+                form.reset();
+                
+                setTimeout(() => {
+                    successDiv.remove();
+                }, 5000);
+                
+            } catch (error) {
+                alert('Failed to send message. Please try again.');
+            } finally {
+                // Hide loading state
+                btnText.classList.remove('hidden');
+                loading.classList.add('hidden');
+                submitBtn.disabled = false;
+            }
+        });
+
+        // FAQ toggle functionality
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('svg');
+            
+            const isOpen = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').style.maxHeight = '0';
+                item.querySelector('svg').style.transform = 'rotate(0deg)';
+            });
+            
+            // Toggle current item
+            if (!isOpen) {
+                faqItem.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Add success message styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .success-message {
+                display: none;
+                padding: var(--space-4);
+                background: rgba(5, 150, 105, 0.1);
+                border: 1px solid var(--success);
+                border-radius: var(--radius-md);
+                color: var(--success);
+                margin-bottom: var(--space-6);
+            }
+            
+            .success-message.show {
+                display: block;
+                animation: slideDown 0.3s ease-out;
+            }
+            
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-1rem);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .contact-section {
+                padding: var(--space-16) 0;
+            }
+            
+            .contact-container {
+                display: grid;
+                gap: var(--space-12);
+                grid-template-columns: 1fr;
+                max-width: 80rem;
+                margin: 0 auto;
+            }
+            
+            @media (min-width: 1024px) {
+                .contact-container {
+                    grid-template-columns: 1fr 1.5fr;
+                }
+            }
+            
+            .contact-info {
+                display: grid;
+                gap: var(--space-6);
+                grid-template-columns: 1fr;
+            }
+            
+            @media (min-width: 640px) {
+                .contact-info {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (min-width: 1024px) {
+                .contact-info {
+                    grid-template-columns: 1fr;
+                }
+            }
+            
+            .contact-card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-xl);
+                padding: var(--space-6);
+                text-align: center;
+                transition: all var(--transition-normal);
+            }
+            
+            .contact-card:hover {
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-lg);
+                border-color: var(--primary);
+            }
+            
+            .contact-icon {
+                width: 3rem;
+                height: 3rem;
+                margin: 0 auto var(--space-4);
+                background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+                border-radius: var(--radius-xl);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+            
+            .contact-icon svg {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            
+            .contact-card h3 {
+                font-size: var(--font-size-lg);
+                font-weight: var(--font-weight-semibold);
+                margin-bottom: var(--space-2);
+                color: var(--text-primary);
+            }
+            
+            .contact-card p {
+                color: var(--text-secondary);
+                margin-bottom: var(--space-3);
+            }
+            
+            .contact-link {
+                color: var(--primary);
+                font-weight: var(--font-weight-medium);
+                text-decoration: none;
+            }
+            
+            .contact-link:hover {
+                text-decoration: underline;
+            }
+            
+            .contact-address {
+                font-style: normal;
+                color: var(--text-secondary);
+                line-height: var(--line-height-relaxed);
+            }
+            
+            .office-hours div {
+                margin-bottom: var(--space-1);
+                color: var(--text-secondary);
+            }
+            
+            .contact-form-container {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-xl);
+                padding: var(--space-8);
+                box-shadow: var(--shadow-sm);
+            }
+            
+            .form-header {
+                margin-bottom: var(--space-8);
+                text-align: center;
+            }
+            
+            .form-header h2 {
+                font-size: var(--font-size-2xl);
+                font-weight: var(--font-weight-semibold);
+                margin-bottom: var(--space-2);
+                color: var(--text-primary);
+            }
+            
+            .form-header p {
+                color: var(--text-secondary);
+            }
+            
+            .form-grid {
+                display: grid;
+                gap: var(--space-4);
+                grid-template-columns: 1fr;
+            }
+            
+            @media (min-width: 640px) {
+                .form-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+            
+            .faq-section {
+                padding: var(--space-16) 0;
+                background: var(--surface-alt);
+            }
+            
+            .faq-container {
+                max-width: 48rem;
+                margin: 0 auto;
+            }
+            
+            .faq-item {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius-lg);
+                margin-bottom: var(--space-4);
+                overflow: hidden;
+                transition: all var(--transition-normal);
+            }
+            
+            .faq-item:hover {
+                border-color: var(--primary);
+            }
+            
+            .faq-question {
+                width: 100%;
+                padding: var(--space-6);
+                background: none;
+                border: none;
+                text-align: left;
+                font-size: var(--font-size-lg);
+                font-weight: var(--font-weight-medium);
+                color: var(--text-primary);
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: var(--space-4);
+            }
+            
+            .faq-question svg {
+                width: 1.25rem;
+                height: 1.25rem;
+                color: var(--text-secondary);
+                transition: transform var(--transition-fast);
+                flex-shrink: 0;
+            }
+            
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height var(--transition-normal);
+            }
+            
+            .faq-answer p {
+                padding: 0 var(--space-6) var(--space-6);
+                color: var(--text-secondary);
+                line-height: var(--line-height-relaxed);
+            }
+            
+            .checkbox-label {
+                display: flex;
+                align-items: flex-start;
+                gap: var(--space-3);
+                cursor: pointer;
+                user-select: none;
+                line-height: var(--line-height-relaxed);
+            }
+            
+            .checkbox-label input[type="checkbox"] {
+                position: absolute;
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            
+            .checkbox-custom {
+                width: 1.25rem;
+                height: 1.25rem;
+                margin-top: 0.125rem;
+                border: 2px solid var(--border);
+                border-radius: var(--radius);
+                background: var(--surface);
+                transition: all var(--transition-fast);
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+            
+            .checkbox-custom::after {
+                content: '';
+                width: 0.5rem;
+                height: 0.25rem;
+                border-left: 2px solid white;
+                border-bottom: 2px solid white;
+                transform: rotate(-45deg) scale(0);
+                transition: transform var(--transition-fast);
+            }
+            
+            .checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+                background: var(--primary);
+                border-color: var(--primary);
+            }
+            
+            .checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+                transform: rotate(-45deg) scale(1);
+            }
+            
+            .checkbox-label input[type="checkbox"]:focus + .checkbox-custom {
+                box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
