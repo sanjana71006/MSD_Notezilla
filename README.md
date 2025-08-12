@@ -37,8 +37,7 @@
 
 | **Login Page** | **Signup Page** | **Home Page** |  
 |---------------|----------------|--------------|  
-| ![Login]() | ![Signup](screenshots/signup.png) | ![Home](screenshots/home.png) |  
-
+| ![Login](SignUp.png) | ![Signup](Login.png) 
 ## Future Enhancements 🚀  
 
 - **🔍 Search Functionality** - Find notes by subject, college, or keywords  
@@ -59,8 +58,5 @@ MIT
 
 ---  
 
-*(Replace screenshot paths with actual images and update GitHub link before use.)*  
-
----  
 
 Made with ❤️ for students, by students! 📚✨
