@@ -37,7 +37,7 @@
 
 | **Login Page** | **Signup Page** | **Landing Page** |
 |---------------|----------------|----------------|
-| ![Login](Login.png) | ![Signup](SignUp.png) | ![LandingPage](Landing.png) |
+| ![Login](Login.png) | ![Signup](SignUp.png) | ![LandingPage](LandingPage.png) |
 ## Future Enhancements 🚀  
 
 - **🔍 Search Functionality** - Find notes by subject, college, or keywords  
